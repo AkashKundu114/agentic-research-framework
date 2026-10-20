@@ -46,7 +46,7 @@ with a stability index of \BaselineStabilityIndex{}.
 
 ## 3. Automated Macro Generator Script
 
-ARF provides [`scripts/generate_tables.py`](../scripts/generate_tables.py) as an extensible template for parsing `results/*.json` and producing both LaTeX macros and publication tables:
+ARF provides [`scripts/generate_tables.py`](https://github.com/AkashKundu114/agentic-research-framework/blob/main/scripts/generate_tables.py) as an extensible template for parsing `results/*.json` and producing both LaTeX macros and publication tables:
 
 ```python
 import json
