@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this starter template or research software, please cite it as below."
+authors:
+  - family-names: "Kundu"
+    given-names: "Akash"
+    email: "akashkundu1152@gmail.com"
+title: "Agentic Research Framework (ARF): Autonomous Multi-Agent Research Framework for Reproducible Science"
+version: 0.1.0
+date-released: 2026-10-20
+url: "https://github.com/AkashKundu114/agentic-research-framework"
+keywords:
+  - "ai-agents"
+  - "reproducible-research"
+  - "machine-learning"
+  - "research-template"
+license: "MIT"

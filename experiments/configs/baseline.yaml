@@ -1,0 +1,11 @@
+name: "baseline-run"
+description: "Default baseline evaluation benchmark"
+seed: 42
+parameters:
+  num_samples: 200
+  learning_rate: 0.01
+  tolerance: 1e-4
+  metric_target: "accuracy"
+logging:
+  level: "INFO"
+  save_artifacts: true

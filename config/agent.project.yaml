@@ -1,0 +1,26 @@
+# Version-controlled, non-secret project defaults.
+project:
+  name: "replace-with-project-name"
+  type: "research"
+  primary_language: "python"
+  goals:
+    - "Implement a reproducible and testable research workflow"
+  non_goals:
+    - "Do not claim results without a recorded experiment"
+
+quality:
+  require_tests_for_behavior_changes: true
+  require_docs_for_user_visible_changes: true
+  allow_unverified_claims: false
+
+research:
+  require_seed_recording: true
+  require_config_snapshot: true
+  require_environment_record: true
+  preserve_negative_results: true
+  prohibit_data_leakage: true
+
+privacy:
+  default_network_policy: "ask-before-use"
+  external_uploads: "explicit-approval-required"
+  private_data_in_git: false

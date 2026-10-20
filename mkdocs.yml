@@ -1,0 +1,72 @@
+site_name: Agentic Research Framework (ARF)
+site_description: Autonomous multi-agent scientific research framework & reproducible paper engine
+site_author: Akash Kundu
+site_url: https://akashkundu114.github.io/agentic-research-framework/
+
+repo_name: AkashKundu114/agentic-research-framework
+repo_url: https://github.com/AkashKundu114/agentic-research-framework
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Quickstart Guide: quickstart.md
+      - Architecture & Components: architecture.md
+  - Multi-Agent Orchestration:
+      - Subagent Governance: multi_agent_orchestration.md
+      - Prompt Catalog (Goals & Loops): prompt_catalog.md
+  - Research Integrity:
+      - Single-Source LaTeX Sync: latex_macro_sync.md
+      - Reproducibility Protocol: reproducibility.md
+      - Security & Local Policies: security.md

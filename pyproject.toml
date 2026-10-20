@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-research-framework"
+version = "0.1.0"
+description = "Autonomous multi-agent scientific research framework & reproducible paper engine"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "Akash Kundu", email = "akashkundu1152@gmail.com"}
+]
+urls = {Repository = "https://github.com/AkashKundu114/agentic-research-framework"}
+keywords = [
+  "ai-agents",
+  "agentic-workflows",
+  "reproducible-research",
+  "autonomous-research",
+  "machine-learning",
+  "google-antigravity",
+  "claude-code",
+  "latex-automation"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+  "mypy>=1.10.0"
+]
+docs = [
+  "mkdocs-material>=9.5.0",
+  "mkdocs>=1.6.0"
+]
+
+[project.scripts]
+arf = "agentic_research.cli:main"
+research-cli = "agentic_research.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+mypy_path = "src"
+strict = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
