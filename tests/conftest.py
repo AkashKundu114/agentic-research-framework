@@ -25,11 +25,7 @@ def mock_yaml_config(tmp_path: Path) -> Path:
     """Fixture providing a temporary valid YAML config file."""
     cfg_file = tmp_path / "test_config.yaml"
     cfg_file.write_text(
-        "project:\n"
-        "  name: fixture-project\n"
-        "  seed: 999\n"
-        "parameters:\n"
-        "  learning_rate: 0.001\n",
+        "project:\n  name: fixture-project\n  seed: 999\nparameters:\n  learning_rate: 0.001\n",
         encoding="utf-8",
     )
     return cfg_file

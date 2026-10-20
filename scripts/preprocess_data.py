@@ -53,8 +53,12 @@ def split_data(
     train_file = output_dir / "train.json"
     test_file = output_dir / "test.json"
 
-    train_file.write_text(json.dumps({"header": header, "rows": scale_rows(train_rows)}, indent=2), encoding="utf-8")
-    test_file.write_text(json.dumps({"header": header, "rows": scale_rows(test_rows)}, indent=2), encoding="utf-8")
+    train_file.write_text(
+        json.dumps({"header": header, "rows": scale_rows(train_rows)}, indent=2), encoding="utf-8"
+    )
+    test_file.write_text(
+        json.dumps({"header": header, "rows": scale_rows(test_rows)}, indent=2), encoding="utf-8"
+    )
 
     print(f"[+] Saved {len(train_rows)} train rows to {train_file}")
     print(f"[+] Saved {len(test_rows)} test rows to {test_file}")
@@ -62,9 +66,18 @@ def split_data(
 
 def main() -> int:
     """CLI entrypoint for data preprocessing."""
-    parser = argparse.ArgumentParser(description="Preprocess raw datasets into leakage-free train/test splits.")
-    parser.add_argument("--input", type=Path, default=Path("data/raw/synthetic_benchmark.json"), help="Raw data file")
-    parser.add_argument("--output-dir", type=Path, default=Path("data/processed"), help="Processed output directory")
+    parser = argparse.ArgumentParser(
+        description="Preprocess raw datasets into leakage-free train/test splits."
+    )
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=Path("data/raw/synthetic_benchmark.json"),
+        help="Raw data file",
+    )
+    parser.add_argument(
+        "--output-dir", type=Path, default=Path("data/processed"), help="Processed output directory"
+    )
     parser.add_argument("--seed", type=int, default=42, help="Split seed")
 
     args = parser.parse_args()

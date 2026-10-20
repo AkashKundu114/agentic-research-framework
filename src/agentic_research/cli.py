@@ -20,18 +20,28 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # Subcommand: info
-    parser_info = subparsers.add_parser("info", help="Display project configuration and environment info")
-    parser_info.add_argument("--config", type=Path, default=None, help="Path to project config YAML/JSON")
+    parser_info = subparsers.add_parser(
+        "info", help="Display project configuration and environment info"
+    )
+    parser_info.add_argument(
+        "--config", type=Path, default=None, help="Path to project config YAML/JSON"
+    )
 
     # Subcommand: run
     parser_run = subparsers.add_parser("run", help="Execute the evaluation pipeline")
     parser_run.add_argument("--config", type=Path, default=None, help="Path to config file")
     parser_run.add_argument("--samples", type=int, default=100, help="Number of samples to process")
-    parser_run.add_argument("--output", type=Path, default=Path("results/metrics.json"), help="Output metrics path")
+    parser_run.add_argument(
+        "--output", type=Path, default=Path("results/metrics.json"), help="Output metrics path"
+    )
 
     # Subcommand: eval
-    parser_eval = subparsers.add_parser("eval", help="Evaluate existing results or verify artifacts")
-    parser_eval.add_argument("--metrics", type=Path, default=Path("results/metrics.json"), help="Path to metrics JSON")
+    parser_eval = subparsers.add_parser(
+        "eval", help="Evaluate existing results or verify artifacts"
+    )
+    parser_eval.add_argument(
+        "--metrics", type=Path, default=Path("results/metrics.json"), help="Path to metrics JSON"
+    )
 
     return parser
 

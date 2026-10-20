@@ -58,10 +58,24 @@ Proposed Model & \\textbf{{{acc:.3f}}} & \\textbf{{{stability:.3f}}} & \\textbf{
 
 def main() -> int:
     """CLI entrypoint for table generation."""
-    parser = argparse.ArgumentParser(description="Export experiment results to LaTeX and Markdown tables.")
-    parser.add_argument("--metrics", type=Path, default=Path("results/metrics.json"), help="Metrics JSON input")
-    parser.add_argument("--output-tex", type=Path, default=Path("results/tables/table1.tex"), help="Output LaTeX path")
-    parser.add_argument("--output-md", type=Path, default=Path("results/tables/table1.md"), help="Output Markdown path")
+    parser = argparse.ArgumentParser(
+        description="Export experiment results to LaTeX and Markdown tables."
+    )
+    parser.add_argument(
+        "--metrics", type=Path, default=Path("results/metrics.json"), help="Metrics JSON input"
+    )
+    parser.add_argument(
+        "--output-tex",
+        type=Path,
+        default=Path("results/tables/table1.tex"),
+        help="Output LaTeX path",
+    )
+    parser.add_argument(
+        "--output-md",
+        type=Path,
+        default=Path("results/tables/table1.md"),
+        help="Output Markdown path",
+    )
 
     args = parser.parse_args()
     generate_tables(args.output_tex, args.output_md, args.metrics)

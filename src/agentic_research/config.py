@@ -61,7 +61,9 @@ def load_config(config_path: Path | str | None = None) -> ProjectConfig:
         data = json.loads(content)
     elif path.suffix.lower() in {".yaml", ".yml"}:
         if yaml is None:
-            raise ValueError("PyYAML is required to parse YAML configs. Install with pip install pyyaml.")
+            raise ValueError(
+                "PyYAML is required to parse YAML configs. Install with pip install pyyaml."
+            )
         data = yaml.safe_load(content) or {}
     else:
         raise ValueError(f"Unsupported config extension: {path.suffix}")

@@ -9,7 +9,9 @@ import sys
 from pathlib import Path
 
 
-def render_svg_figure(output_path: Path, title: str = "Benchmark Accuracy vs Baseline", score: float = 0.88) -> None:
+def render_svg_figure(
+    output_path: Path, title: str = "Benchmark Accuracy vs Baseline", score: float = 0.88
+) -> None:
     """Generate lightweight, self-contained SVG plot without requiring external graphics toolkits."""
     bar_width = int(score * 400)
     svg_content = f"""<svg width="600" height="240" xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +30,18 @@ def render_svg_figure(output_path: Path, title: str = "Benchmark Accuracy vs Bas
 
 def main() -> int:
     """CLI entrypoint for figure generation."""
-    parser = argparse.ArgumentParser(description="Generate publication figures from experiment results.")
-    parser.add_argument("--metrics", type=Path, default=Path("results/metrics.json"), help="Metrics input path")
-    parser.add_argument("--output", type=Path, default=Path("results/figures/fig1_benchmark.svg"), help="Output SVG path")
+    parser = argparse.ArgumentParser(
+        description="Generate publication figures from experiment results."
+    )
+    parser.add_argument(
+        "--metrics", type=Path, default=Path("results/metrics.json"), help="Metrics input path"
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("results/figures/fig1_benchmark.svg"),
+        help="Output SVG path",
+    )
 
     args = parser.parse_args()
 

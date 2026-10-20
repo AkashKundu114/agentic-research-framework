@@ -14,9 +14,15 @@ from agentic_research.pipeline import run_pipeline
 
 def main() -> int:
     """CLI entrypoint for running an experiment."""
-    parser = argparse.ArgumentParser(description="Run experiment according to config specification.")
-    parser.add_argument("--config", type=Path, default=Path("experiments/configs/baseline.yaml"), help="Config file")
-    parser.add_argument("--output-dir", type=Path, default=Path("results"), help="Results directory")
+    parser = argparse.ArgumentParser(
+        description="Run experiment according to config specification."
+    )
+    parser.add_argument(
+        "--config", type=Path, default=Path("experiments/configs/baseline.yaml"), help="Config file"
+    )
+    parser.add_argument(
+        "--output-dir", type=Path, default=Path("results"), help="Results directory"
+    )
 
     args = parser.parse_args()
 

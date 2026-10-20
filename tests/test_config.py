@@ -36,7 +36,9 @@ def test_load_yaml_config(mock_yaml_config: Path) -> None:
 def test_load_json_config(tmp_path: Path) -> None:
     """Verify loading from a JSON file."""
     json_path = tmp_path / "config.json"
-    json_path.write_text(json.dumps({"project": {"name": "json-test", "seed": 7}}), encoding="utf-8")
+    json_path.write_text(
+        json.dumps({"project": {"name": "json-test", "seed": 7}}), encoding="utf-8"
+    )
     cfg = load_config(json_path)
     assert cfg.name == "json-test"
     assert cfg.seed == 7
