@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/architecture/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/latex_macro_sync/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/multi_agent_orchestration/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/prompt_catalog/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/quickstart/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/reproducibility/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://akashkundu114.github.io/agentic-research-framework/security/</loc>
+         <lastmod>2026-10-20</lastmod>
+    </url>
+</urlset>
